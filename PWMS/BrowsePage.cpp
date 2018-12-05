@@ -23,7 +23,7 @@ int loadBrowseInfoPage(void) {
 		printf("=");
 		}
 	
-		printf("\n\n                         -------->   Browsing the specific Information of the system\n\n");
+		printf("\n\n \t\t\t                        -------->   Browsing the specific Information of the system\n\n");
 
 		for (int i = 0; i < Conls; i++) {
 			printf("=");
