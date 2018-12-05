@@ -1,0 +1,115 @@
+﻿生成启动时间为 2018/12/4 15:29:10。
+     1>项目“D:\GAME AND PROGRAMME CODE\PWMS\PWMS\PWMS\PWMS.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Release\PWMS.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         d:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt About.cpp BrowsePage.cpp DeletePage.cpp MainPage.cpp HomepageUI.cpp QuitPage.cpp SeekPage.cpp
+         About.cpp
+         BrowsePage.cpp
+         DeletePage.cpp
+     1>DeletePage.cpp(25): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>DeletePage.cpp(29): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>DeletePage.cpp(69): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>DeletePage.cpp(70): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+         MainPage.cpp
+         HomepageUI.cpp
+     1>HomepageUI.cpp(3): warning C4101: “j”: 未引用的局部变量
+         QuitPage.cpp
+         SeekPage.cpp
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(31): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(32): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(33): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(33): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(33): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(33): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(34): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(34): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(34): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(34): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(35): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(35): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(35): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(35): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(36): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(36): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(36): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(37): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(38): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(38): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(38): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(38): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(38): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(38): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(38): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(38): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(38): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(39): warning C4566: 由通用字符名称“\u2590”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(39): warning C4566: 由通用字符名称“\u2591”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(40): warning C4566: 由通用字符名称“\u2580”表示的字符不能在当前代码页(936)中表示出来
+     1>SeekPage.cpp(54): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>SeekPage.cpp(55): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Microsoft Visual Studio 10.0\VC\include\string.h(110) : 参见“strcat”的声明
+     1>SeekPage.cpp(82): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+     1>SeekPage.cpp(88): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\Microsoft Visual Studio 10.0\VC\include\stdio.h(304) : 参见“scanf”的声明
+         所有输出均为最新。
+       Link:
+         d:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GAME AND PROGRAMME CODE\PWMS\PWMS\Release\PWMS.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\PWMS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\GAME AND PROGRAMME CODE\PWMS\PWMS\Release\PWMS.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GAME AND PROGRAMME CODE\PWMS\PWMS\Release\PWMS.lib" /MACHINE:X86 Release\About.obj
+         Release\AddPage.obj
+         Release\BrowsePage.obj
+         Release\DeletePage.obj
+         Release\MainPage.obj
+         Release\HomepageUI.obj
+         Release\QuitPage.obj
+         Release\SeekPage.obj
+         Release\sqlite3.obj
+         正在生成代码
+         已完成代码的生成
+         PWMS.vcxproj -> D:\GAME AND PROGRAMME CODE\PWMS\PWMS\Release\PWMS.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\GAME AND PROGRAMME CODE\PWMS\PWMS\Release\PWMS.exe;#1" /manifest Release\PWMS.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         正在删除文件“Release\PWMS.unsuccessfulbuild”。
+         正在对“Release\PWMS.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\GAME AND PROGRAMME CODE\PWMS\PWMS\PWMS\PWMS.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:13.66
