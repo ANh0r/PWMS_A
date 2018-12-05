@@ -16,7 +16,7 @@ int ScriptCheck(char _input[50]);
 
 //添加学生信息
 
-char inputData[6][50];	//输入的 字段
+char inputData[7][50];	//输入的 字段
 int nowInputIndex = 0;
 char tips[50] = { "" };		//反馈提示
 
@@ -29,7 +29,7 @@ void addData(char _data[7][50]) {
 	char *errmsg = 0;
 
 	char query[2000] = { "" };
-	sprintf(query, "INSERT INTO `AccountsPass` ( 'ID','The Website', 'Login name', 'The third acconuts', 'Phone number', 'E-mail address', 'Password') VALUES ( '%s', '%s', '%s', '%s', '%s', '%s')", _data[0], _data[1], _data[2], _data[3], _data[4], _data[5]);
+	sprintf(query, "INSERT INTO `AccountsPass` ( 'ID', 'The Website', 'Login name', 'The third acconuts', 'Phone number', 'E-mail address', 'Password') VALUES ( '%s','%s', '%s', '%s', '%s', '%s', '%s')", _data[0], _data[1], _data[2], _data[3], _data[4], _data[5],_data[6]);
 
 	ret = sqlite3_open("./Adding.db", &db);	//连接数据库
 	ret = sqlite3_exec(db, query, NULL, NULL, &errmsg);	//执行SQL
@@ -163,7 +163,7 @@ int ScriptCheck(char _input[50]) {
 		addData(inputData);		//SAVE
 
 								//清空上次的数据
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; i < 7; i++) {
 			strcpy(inputData[i], "");
 		}
 		nowInputIndex = 0;

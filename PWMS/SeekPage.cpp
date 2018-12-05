@@ -27,21 +27,21 @@ void SeekUI(void){
 	}//for end
 
 
-printf("------------------------->To search something in Database,you can choose Using Website or Username <--------------------\n");
+printf("\t\t\t------------------------->To search something in Database,you can choose Using Website or Username <--------------------\n");
 printf("\n\n\n\n");
-printf("\t\t\t.----------------. .----------------. .----------------. .----------------. \n");
-printf("\t\t\t| .--------------. | .--------------. | .--------------. | .--------------. |\n");
-printf("\t\t\t| |   ______     | | | _____  _____ | | | ____    ____ | | |    _______   | |\n");
-printf("\t\t\t| |  |_   __ \\   | | ||_   _||_   _|| | ||_   \\  /   _|| | |   /  ___  |  | |\n");
-printf("\t\t\t| |    | |__) |  | | |  | | /\\ | |  | | |  |   \\/   |  | | |  |  (__ \\_|  | |\n");
-printf("\t\t\t| |    |  ___/   | | |  | |/  \\| |  | | |  | |\\  /| |  | | |   '.___`-.   | |\n");
-printf("\t\t\t| |   _| |_      | | |  |   /\\   |  | | | _| |_\\/_| |_ | | |  |`\\____) |  | |\n");
-printf("\t\t\t| |  |_____|     | | |  |__/  \\__|  | | ||_____||_____|| | |  |_______.'  | |\n");
-printf("\t\t\t| |              | | |              | | |              | | |              | |\n");
-printf("\t\t\t| '--------------' | '--------------' | '--------------' | '--------------' |\n");
-printf("\t\t\t '----------------' '----------------' '----------------' '----------------' \n");
+printf("\t\t\t\t\t.----------------. .----------------. .----------------. .----------------. \n");
+printf("\t\t\t\t\t| .--------------. | .--------------. | .--------------. | .--------------. |\n");
+printf("\t\t\t\t\t| |   ______     | | | _____  _____ | | | ____    ____ | | |    _______   | |\n");
+printf("\t\t\t\t\t| |  |_   __ \\   | | ||_   _||_   _|| | ||_   \\  /   _|| | |   /  ___  |  | |\n");
+printf("\t\t\t\t\t| |    | |__) |  | | |  | | /\\ | |  | | |  |   \\/   |  | | |  |  (__ \\_|  | |\n");
+printf("\t\t\t\t\t| |    |  ___/   | | |  | |/  \\| |  | | |  | |\\  /| |  | | |   '.___`-.   | |\n");
+printf("\t\t\t\t\t| |   _| |_      | | |  |   /\\   |  | | | _| |_\\/_| |_ | | |  |`\\____) |  | |\n");
+printf("\t\t\t\t\t| |  |_____|     | | |  |__/  \\__|  | | ||_____||_____|| | |  |_______.'  | |\n");
+printf("\t\t\t\t\t| |              | | |              | | |              | | |              | |\n");
+printf("\t\t\t\t\t| '--------------' | '--------------' | '--------------' | '--------------' |\n");
+printf("\t\t\t\t\t '----------------' '----------------' '----------------' '----------------' \n");
 printf("\n\n\n\n");
-printf("--------------------------------------->Choose  to seek in Login name(L) or Website(W)<-------------------------------\n");
+printf("\t\t--------------------------------------->Choose  to seek in Login name(L) or Website(W)<-------------------------------\n");
 
 
 printf("\n\n\n");
@@ -147,7 +147,7 @@ int ShowSeekData(void){
 	if (The1Choice=='L'||The1Choice=='l'){
 		/*The codes below are used as the part if user chooses Loginname as the result!*/
 	
-	printf("\t--------------------------------------->Please input the Login name you want to seek<---------------------------------\t\n");
+	printf("\t\t--------------------------------------->Please input the Login name you want to seek<---------------------------------\n");
 	scanf("%s",_UserIn);
 	system("cls");
 	system("cls");
@@ -158,7 +158,7 @@ int ShowSeekData(void){
 		printf("\n");
 
 		BackUI();
-		printf("\t-------------------------------------------------------->Seeking Result<-----------------------------------------------\t\n\n");
+		printf("\t\t-------------------------------------------------------->Seeking Result<-----------------------------------------------\n\n");
 	printf("ID        The Website	                Login name	    The 3rd acconuts    Phone number	    E-mail address	          Password\n");
 	for (int i = 0; i < Conls; i++) {
 			printf("-");
@@ -184,7 +184,7 @@ int ShowSeekData(void){
 
 	else if(The1Choice=='W'||The1Choice=='w'){
 		/*The codes below are used as the part if user chooses Website as the result!*/
-	printf("\t------------------------------------------>Please input the Website you want to seek<---------------------------------\t\n");
+	printf("\t\t------------------------------------------>Please input the Website you want to seek<---------------------------------\n");
 	scanf("%s",_UserIn);
 	system("cls");
 	for (int i = 0; i < Conls; i++) {
@@ -195,7 +195,7 @@ int ShowSeekData(void){
 		
 	
 		BackUI();
-		printf("\t-------------------------------------------------------->Seeking Result<-----------------------------------------------\t\n\n");
+		printf("\t\t-------------------------------------------------------->Seeking Result<-----------------------------------------------\t\n\n");
 		printf("ID        The Website	                Login name	    The 3rd acconuts    Phone number	    E-mail address	          Password\n");
 	for (int i = 0; i < Conls; i++) {
 			printf("-");
