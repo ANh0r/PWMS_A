@@ -11,7 +11,7 @@ Plus: where can make some line+cols;
 #include <string.h>
 #include "ProjectHeader.h"
 #include "sqlite3.h"
-#define Conls 120
+#define Conls 150
 
 int ShowSeekData(void);
 void SeekUI(void);
@@ -51,17 +51,17 @@ void BackUI(void){
 	
 //printf("----------------------------->To search something in Database,you can choose Using Website or Username <---------------------\n");
 printf("\n\n\n\n");
-printf("\t\t\t.----------------. .----------------. .----------------. .----------------. \n");
-printf("\t\t\t| .--------------. | .--------------. | .--------------. | .--------------. |\n");
-printf("\t\t\t| |   ______     | | | _____  _____ | | | ____    ____ | | |    _______   | |\n");
-printf("\t\t\t| |  |_   __ \\   | | ||_   _||_   _|| | ||_   \\  /   _|| | |   /  ___  |  | |\n");
-printf("\t\t\t| |    | |__) |  | | |  | | /\\ | |  | | |  |   \\/   |  | | |  |  (__ \\_|  | |\n");
-printf("\t\t\t| |    |  ___/   | | |  | |/  \\| |  | | |  | |\\  /| |  | | |   '.___`-.   | |\n");
-printf("\t\t\t| |   _| |_      | | |  |   /\\   |  | | | _| |_\\/_| |_ | | |  |`\\____) |  | |\n");
-printf("\t\t\t| |  |_____|     | | |  |__/  \\__|  | | ||_____||_____|| | |  |_______.'  | |\n");
-printf("\t\t\t| |              | | |              | | |              | | |              | |\n");
-printf("\t\t\t| '--------------' | '--------------' | '--------------' | '--------------' |\n");
-printf("\t\t\t '----------------' '----------------' '----------------' '----------------' \n");
+printf("\t\t\t\t\t.----------------. .----------------. .----------------. .----------------. \n");
+printf("\t\t\t\t\t| .--------------. | .--------------. | .--------------. | .--------------. |\n");
+printf("\t\t\t\t\t| |   ______     | | | _____  _____ | | | ____    ____ | | |    _______   | |\n");
+printf("\t\t\t\t\t| |  |_   __ \\   | | ||_   _||_   _|| | ||_   \\  /   _|| | |   /  ___  |  | |\n");
+printf("\t\t\t\t\t| |    | |__) |  | | |  | | /\\ | |  | | |  |   \\/   |  | | |  |  (__ \\_|  | |\n");
+printf("\t\t\t\t\t| |    |  ___/   | | |  | |/  \\| |  | | |  | |\\  /| |  | | |   '.___`-.   | |\n");
+printf("\t\t\t\t\t| |   _| |_      | | |  |   /\\   |  | | | _| |_\\/_| |_ | | |  |`\\____) |  | |\n");
+printf("\t\t\t\t\t| |  |_____|     | | |  |__/  \\__|  | | ||_____||_____|| | |  |_______.'  | |\n");
+printf("\t\t\t\t\t| |              | | |              | | |              | | |              | |\n");
+printf("\t\t\t\t\t| '--------------' | '--------------' | '--------------' | '--------------' |\n");
+printf("\t\t\t\t\t '----------------' '----------------' '----------------' '----------------' \n");
 printf("\n\n\n\n");
 
 }//BackUI end
@@ -79,6 +79,9 @@ void SeekInputUI(char _UserIn[100]){
 	char QueryUser[200]= "SELECT * FROM `AccountsPass` WHERE `The Website` = '";
 	    strcat(QueryUser,  _UserIn);
 		strcat(QueryUser, "'");
+		strcat(QueryUser, " ORDER BY CAST (`ID` AS BINARY) ASC");
+
+		//ORDER BY CAST (`ID` AS BINARY) ASC
 
 
 
@@ -108,16 +111,16 @@ void SeekInputUI2(char _UserIn2[100]){
 	char QueryUser[200]= "SELECT * FROM `AccountsPass` WHERE `Login name` = '";
 	    strcat(QueryUser,  _UserIn2);
 		strcat(QueryUser, "'");
-		strcat(QueryUser, "ORDER BY `The Website`");
-
+		strcat(QueryUser, "ORDER BY CAST (`ID` AS BINARY) ASC`");
+		//ret = sqlite3_get_table(db, "SELECT * FROM `AccountsPass` ORDER BY CAST (`ID` AS BINARY) ASC", &dbResult, &rowNum, &columnNum, &errmsg);
 
 
 	ret = sqlite3_get_table(db, QueryUser, &dbResult, &rowNum, &columnNum, &errmsg);
 	if (ret == SQLITE_OK) {
 		index = columnNum;
 		for (int i = 0; i < rowNum; i++) {
-			printf("%-20s%-20s%-20s%-20s%-20s%-20s", dbResult[index], dbResult[index + 1], dbResult[index + 2], dbResult[index + 3], dbResult[index + 4], dbResult[index + 5]);
-			index += 6;
+			printf("%-10s%-30s%-20s%-20s%-20s%-30s%-20s", dbResult[index], dbResult[index + 1], dbResult[index + 2], dbResult[index + 3], dbResult[index + 4], dbResult[index + 5],dbResult[index + 6]);
+			index += 7;
 			printf("\n");
 		}
 	}
@@ -144,7 +147,7 @@ int ShowSeekData(void){
 	if (The1Choice=='L'||The1Choice=='l'){
 		/*The codes below are used as the part if user chooses Loginname as the result!*/
 	
-	printf("--------------------------------------->Please input the Login name you want to seek<---------------------------------\n");
+	printf("\t--------------------------------------->Please input the Login name you want to seek<---------------------------------\t\n");
 	scanf("%s",_UserIn);
 	system("cls");
 	system("cls");
@@ -155,8 +158,8 @@ int ShowSeekData(void){
 		printf("\n");
 
 		BackUI();
-		printf("-------------------------------------------------------->Seeking Result<-----------------------------------------------\n\n");
-	printf("The Website	    Login name	        The third acconuts  Phone number	E-mail address	    Password\n");
+		printf("\t-------------------------------------------------------->Seeking Result<-----------------------------------------------\t\n\n");
+	printf("ID        The Website	                Login name	    The 3rd acconuts    Phone number	    E-mail address	          Password\n");
 	for (int i = 0; i < Conls; i++) {
 			printf("-");
 		}
@@ -166,7 +169,7 @@ int ShowSeekData(void){
 		}
 		printf("\n");
 
-	printf("PLEASE CHOOSING KEEPING SEEKING (ANY KEYS) OR EXIT(E)\n");
+	printf("Please Choosing Keeping Searching (ANY KEYS) Or Exit(E)\n");
 	getchar();
 	scanf("%c",&UserChoice);
 	
@@ -181,7 +184,7 @@ int ShowSeekData(void){
 
 	else if(The1Choice=='W'||The1Choice=='w'){
 		/*The codes below are used as the part if user chooses Website as the result!*/
-	printf("------------------------------------------>Please input the Website you want to seek<---------------------------------\n");
+	printf("\t------------------------------------------>Please input the Website you want to seek<---------------------------------\t\n");
 	scanf("%s",_UserIn);
 	system("cls");
 	for (int i = 0; i < Conls; i++) {
@@ -192,8 +195,8 @@ int ShowSeekData(void){
 		
 	
 		BackUI();
-		printf("-------------------------------------------------------->Seeking Result<-----------------------------------------------\n\n");
-		printf("The Website	    Login name	        The third acconuts  Phone number	E-mail address	    Password\n");
+		printf("\t-------------------------------------------------------->Seeking Result<-----------------------------------------------\t\n\n");
+		printf("ID        The Website	                Login name	    The 3rd acconuts    Phone number	    E-mail address	          Password\n");
 	for (int i = 0; i < Conls; i++) {
 			printf("-");
 		}

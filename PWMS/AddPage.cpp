@@ -10,7 +10,7 @@ I do not change the varible name!
 #include <windows.h>
 #include <stdio.h>
 #include "sqlite3.h"
-#define Conls 110
+#define Conls 150
 #define Lines 35
 int ScriptCheck(char _input[50]);
 
@@ -23,13 +23,13 @@ char tips[50] = { "" };		//反馈提示
 void printForm(int nowIndex);
 
 //添加数据到数据库
-void addData(char _data[6][50]) {
+void addData(char _data[7][50]) {
 	sqlite3 *db = 0;	//数据库
 	int ret = 0;	//反馈值
 	char *errmsg = 0;
 
 	char query[2000] = { "" };
-	sprintf(query, "INSERT INTO `AccountsPass` ( 'The Website', 'Login name', 'The third acconuts', 'Phone number', 'E-mail address', 'Password') VALUES ( '%s', '%s', '%s', '%s', '%s', '%s')", _data[0], _data[1], _data[2], _data[3], _data[4], _data[5]);
+	sprintf(query, "INSERT INTO `AccountsPass` ( 'ID','The Website', 'Login name', 'The third acconuts', 'Phone number', 'E-mail address', 'Password') VALUES ( '%s', '%s', '%s', '%s', '%s', '%s')", _data[0], _data[1], _data[2], _data[3], _data[4], _data[5]);
 
 	ret = sqlite3_open("./Adding.db", &db);	//连接数据库
 	ret = sqlite3_exec(db, query, NULL, NULL, &errmsg);	//执行SQL
@@ -40,7 +40,7 @@ void addData(char _data[6][50]) {
 int loadAddInfoPage(void) {
 
 	//每次进入时都清空上次的数据
-	for (int i = 0; i < 6; i++) {
+	for (int i = 0; i < 7; i++) {
 		strcpy(inputData[i], "");
 	}
 	nowInputIndex = 0;
@@ -54,8 +54,8 @@ int loadAddInfoPage(void) {
 			printf("=");
 		}
 
-		printf("\n\n                                           >  Adding the statistics below\n\n");
-		printf("\n\n       The 3rd accounts means that the number of QQ or Wechat or anythings else.（With QQ or Wechat like this) \n\n" );
+		printf("\n\n\t\t                                           >  Adding the statistics below\n\n");
+		printf("\n\n\t\t       The 3rd accounts means that the number of QQ or Wechat or anythings else.（With QQ or Wechat like this) \n\n" );
 
 		for (int i = 0; i < Conls; i++) {
 			printf("=");
@@ -112,9 +112,9 @@ int loadAddInfoPage(void) {
 //打印输入的表单
 void printForm(int nowIndex) {
 
-	char inputField[6][50] = { "The Website", "Login name", "The third acconuts", "Phone number", "E-mail address", "Password" };	//字段提示
+	char inputField[][50] = { "ID","The Website", "Login name", "The third acconuts", "Phone number", "E-mail address", "Password" };	//字段提示
 
-	for (int i = 0; i < 6; i++) {
+	for (int i = 0; i < 7; i++) {
 		if (nowIndex == i) {
 			printf("              > ");
 		}

@@ -5,13 +5,21 @@ User input
 ---->query strcat
 ---->Run SQL
 ---->Display again and go back to the 1St or Exit;
+
+
+///_Password ------> ID!!!
+
+
+
+
+
 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "ProjectHeader.h"
 #include "sqlite3.h"
-#define Conls 120
+#define Conls 150
  void BrowsePageInModify(void);//show original Data  ShouData in this; and we have declared it in "ProjectHeader.h"
  void ModifyInputUI(char _Password[],char _data0[],char _data1[],char _data2[],char _data3[],char _data4[],char _data5[]);
  void ModifyPageIn(void);
@@ -29,16 +37,16 @@ User input
 		printf("=");
 		}//for end
 	
-		printf("\n\n                         -------->   Here is the Original Information of the system\n\n");
-		printf("\n\n                         -------->   To Update some lines,please input the Password on the end of the page\n\n");
-		//Here, we make the easilest version that we pretend the password of every user is different and It can also as the end of the SQL query;
+		printf("\n\n\t\t                         -------->   Here is the Original Information of the system\n\n");
+		printf("\n\n\t\t                         -------->   To Update some lines,please input the ID on the end of the page\n\n"); 
+		
 
 		for (int i = 0; i < Conls; i++) {
 			printf("=");
 		}//for end
 		printf("\n");
 
-		printf("The Website	    Login name	        The third acconuts  Phone number	E-mail address	    Password\n");
+		printf("ID        The Website	                Login name	    The 3rd acconuts    Phone number	    E-mail address	          Password\n");
 	//	printf("\n");
 		for (int i = 0; i < Conls; i++) {
 			printf("-");
@@ -69,14 +77,14 @@ User input
 		for (int i = 0; i < Conls; i++) {
 				printf("=");
 				}//for end
-				printf("\n\n                                         -------->   After Modifying Data  <--------\n\n");
+				printf("\n\n\t\t                                         -------->   After Modifying Data  <--------\n\n");
 						//Here, we make the easilest version that we pretend the password of every user is different and It can also as the end of the SQL query;
 				for (int i = 0; i < Conls; i++) {
 					printf("=");
 				}//for end
 		printf("\n");
 
-		printf("The Website	    Login name	        The third acconuts  Phone number	E-mail address	    Password\n");
+		printf("ID        The Website	                Login name	    The 3rd acconuts    Phone number	    E-mail address	          Password\n");
 	//	printf("\n");
 		for (int i = 0; i < Conls; i++) {
 			printf("-");
@@ -127,7 +135,7 @@ User input
 		strcat(QueryUser, " ,`Password`='");
 		strcat(QueryUser, _data5);
 		strcat(QueryUser, "'");
-		strcat(QueryUser, " WHERE `Password`='");
+		strcat(QueryUser, " WHERE `ID`='");
 		strcat(QueryUser,  _Password);
 		strcat(QueryUser, "'");
 		//printf("%s",QueryUser);
@@ -153,13 +161,13 @@ User input
 				char _data0[150] ;char _data1[150];char _data2[150];char _data3[150];char _data4[150];char _data5[150];
 				//char TheChoiceOfE;
 				char UserChoice;
-				printf("\n\n                         -------->   Here is the Original Information of the system\n\n");
-		        printf("\n\n                         -------->   To Update some lines,please input the Password on the end of the page\n\n"); 
+				
 				BrowsePageInModify();
-				printf("-------------------------------------->Please input the the Password of the Updated line<-------------------------------\n\n");
+				printf("\t\t    -------------------------------------->Please input the the ID of the Updated line<-------------------------------\n");
 				scanf("%s",_Password);
-				printf("-------------------------------------->Please input the the information of for the line<--------------------------------\n\n");
-				printf("---------------------------------->Using Space to make every Text apart and Enter to Finish<----------------------------\n\n");
+				printf("\t -------------------------------------->Please input the the information of for the line<--------------------------------\n\n");
+				printf("\t ----------------------------------->The first Text is The Website, ID will not be Changed<------------------------------\n\n");
+				printf("\t ---------------------------------->Using Space to make every Text apart and Enter to Finish<----------------------------\n\n");
 				scanf("%s",_data0);
 				scanf("%s",_data1);
 				scanf("%s",_data2);

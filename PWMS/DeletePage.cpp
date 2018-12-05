@@ -7,7 +7,7 @@
 #include<string.h>
 #include "ProjectHeader.h"
 #include"sqlite3.h"
-#define Conls 120
+#define Conls 150
  void BrowsePage2(void);
  void deleteData(char _ID[50]) ;
 
@@ -21,7 +21,7 @@ void  DelepageUI(void){
 	
 	system("cls");
 	BrowsePage2();
-	printf("Please input the Website below\n");
+	printf("Please input the ID below\n");
 	scanf("%s",_ID);
 	deleteData(_ID);
 	printf("Please Choosing Keeping Deleting (ANY KEYS) or Exit(E)\n");
@@ -58,14 +58,14 @@ void  DelepageUI(void){
 
 	sqlite3_open("./Adding.db", &db);	//连接数据库
 
-	ret1= sqlite3_get_table(db, "SELECT * FROM `AccountsPass`", &dbResult, &rowNum, &columnNum, &errmsg);
+	ret1 = sqlite3_get_table(db, "SELECT * FROM `AccountsPass` ORDER BY CAST (`ID` AS BINARY) ASC", &dbResult, &rowNum, &columnNum, &errmsg);
 	/*if (ret == SQLITE_OK) 
 		index = columnNum;*/
 	
 
 
 
-	char query[200] = "DELETE FROM `AccountsPass` WHERE `The Website` = '";
+	char query[200] = "DELETE FROM `AccountsPass` WHERE `ID` = '";
 		strcat(query, _ID);
 		strcat(query, "'");
 
@@ -93,15 +93,15 @@ void BrowsePage2(void){// Show original Data
 		printf("=");
 		}//for end
 	
-		printf("\n\n                         -------->   Editing the specific Information of the system\n\n");
-		printf("\n\n                         -------->   To delete some lines,please input the Website on the end of the page\n\n");
+		printf("\n\n\t\t                         -------->   Editing the specific Information of the system\n\n");
+		printf("\n\n\t\t                         -------->   To delete some lines,please input the ID on the end of the page\n\n");
 
 		for (int i = 0; i < Conls; i++) {
 			printf("=");
 		}//for end
 		printf("\n");
 
-		printf("The Website	    Login name	        The third acconuts  Phone number	E-mail address	    Password\n");
+		printf("ID        The Website	                Login name	    The 3rd acconuts    Phone number	    E-mail address	          Password\n");
 	//	printf("\n");
 		for (int i = 0; i < Conls; i++) {
 			printf("-");
