@@ -54,7 +54,7 @@ User input
 
 		printf("\n");
 
-		showData();		//
+		showData(1);		//
 
 		printf("\n");
 
@@ -92,7 +92,7 @@ User input
 
 		printf("\n");
 
-		showData();		//
+		showData(1);		//
 
 		printf("\n");
 

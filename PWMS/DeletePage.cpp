@@ -110,7 +110,7 @@ void BrowsePage2(void){// Show original Data
 
 		printf("\n");
 
-		showData();		//显示数据
+		showData(0);		//显示数据
 
 		printf("\n");
 

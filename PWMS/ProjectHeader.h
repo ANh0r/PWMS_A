@@ -19,7 +19,7 @@ void printForm(int nowIndex);
 int ScriptCheck(char _input[50]);
 //BrowsePage
 int loadBrowseInfoPage(void);
-void showData(void);
+void showData(int temp);
 //DeletePage
 void  DelepageUI(void);
 void BrowsePage2(void);

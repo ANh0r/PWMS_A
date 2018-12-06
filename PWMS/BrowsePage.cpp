@@ -7,11 +7,13 @@
 
 #include "sqlite3.h"
 
-void showData(void);
+void showData(int temp);
 
 int loadBrowseInfoPage(void) {
 	system("title Browse information");
 	while (1) {
+		int temp;
+		int Userinput;
 		getchar();
 		
 		
@@ -19,7 +21,7 @@ int loadBrowseInfoPage(void) {
 		system("cls");
 		
 
-		//上方的线
+		//line above
 	for (int i = 0; i < Conls; i++) {
 		printf("=");
 		}
@@ -39,7 +41,47 @@ int loadBrowseInfoPage(void) {
 
 		printf("\n");
 
-		showData();		//显示数据
+		showData(0);		//ShowData without  Passcode
+
+		for (int i = 0; i < Conls; i++) {
+			printf("-");
+		}
+
+		printf("\n");
+
+		printf("The Data was Locked,Please input ZR's birthday to unlock(4 int)\n");
+
+		scanf("%d",&Userinput);
+		if (Userinput==1215)
+			temp=1;
+
+
+
+		system("cls");
+		
+
+		//line above
+	for (int i = 0; i < Conls; i++) {
+		printf("=");
+		}
+	
+		printf("\n\n \t\t\t                        -------->   Browsing the specific Information of the system\n\n");
+
+		for (int i = 0; i < Conls; i++) {
+			printf("=");
+		}
+		printf("\n");
+
+		printf("ID        The Website	                Login name	    The 3rd acconuts    Phone number	    E-mail address	          Password\n");
+		//printf("");
+		for (int i = 0; i < Conls; i++) {
+			printf("-");
+		}
+
+		printf("\n");
+		showData(temp);
+
+
 
 		printf("\n");
 
@@ -47,6 +89,7 @@ int loadBrowseInfoPage(void) {
 			printf("-");
 		}
 		BackUI();
+		getchar();//clear temp enter
 
 
 		printf("-------------------------------------------------------------->Input Any keys to go back<------------------------------------------------------------- \n\n");
@@ -59,29 +102,40 @@ int loadBrowseInfoPage(void) {
 }
 
 //显示数据
-void showData(void) {
-	sqlite3 *db = 0;	//数据库
-	int ret = 0;	//反馈值
+void showData( int temp) {
+	sqlite3 *db = 0;	// DB
+	int ret1= 0;	// Back Code
 	int ret2 =0;
 	char *errmsg = 0;
-	char **dbResult;	//返回的查询数据
+	char **dbResult;	//SQL result
 	int rowNum, columnNum, index;
 
-	sqlite3_open("./Adding.db", &db);	//连接数据库
+	sqlite3_open("./Adding.db", &db);	//Link DB
 	//ASC  ↑  DESC↓
-	/*order by convert(int,sort) ASC或者order by cast(sort as int) ASC
-如果是oracle数据库的话就用order by to_number(sort) ASC; 
+	/*order by convert(int,sort) ASC    or  order by cast(sort as int) ASC
+if--->oracle  db ----> to use order by to_number(sort) ASC; 
 */
 
-	ret = sqlite3_get_table(db, "SELECT * FROM `AccountsPass` ORDER BY CAST (`ID` AS BINARY) ASC", &dbResult, &rowNum, &columnNum, &errmsg);
+	ret1 = sqlite3_get_table(db, "SELECT * FROM `AccountsPass` ORDER BY CAST (`ID` AS BINARY) ASC", &dbResult, &rowNum, &columnNum, &errmsg);
 	ret2 =sqlite3_exec (db,"ALTER TABLE `AccountsPass`  MODIFY  `ID`  SMALLINT UNSIGNED AUTO_INCREMENT" , 0, &rowNum, (char **)errmsg);
-	if (ret == SQLITE_OK) {
+	if (ret1 == SQLITE_OK) {
 		index = columnNum;
+		
+		if (temp==0){
 		for (int i = 0; i < rowNum; i++) {
+			printf("%-10s%-30s%-20s%-20s%-20s%-30s**********", dbResult[index], dbResult[index + 1], dbResult[index + 2], dbResult[index + 3], dbResult[index + 4], dbResult[index + 5]);
+			index += 7;
+			printf("\n");
+		}
+		}//temp == 0if end
+		else if(temp==1){
+			for (int i = 0; i < rowNum; i++) {
 			printf("%-10s%-30s%-20s%-20s%-20s%-30s%-20s", dbResult[index], dbResult[index + 1], dbResult[index + 2], dbResult[index + 3], dbResult[index + 4], dbResult[index + 5],dbResult[index + 6]);
 			index += 7;
 			printf("\n");
 		}
+		}//if temp==1 end
+
 	}
 	sqlite3_free_table(dbResult);
 }

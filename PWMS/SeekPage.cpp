@@ -1,4 +1,4 @@
-ï»¿/*
+/*
 Draw UI first And the Input some static(Where sentences)
 Need PIC;
 and show data;
@@ -21,7 +21,6 @@ void BackUI(void);
 
 
 void SeekUI(void){
-
 	//draw UI
 	for(int i=0;i<Conls;i++){
 		printf("=");
@@ -69,13 +68,13 @@ printf("\n\n\n\n");
 void SeekInputUI(char _UserIn[100]){
 	/*The codes below are used as the part if user chooses Website as the result!*/
 	
-	sqlite3 *db = 0;	//æ•°æ®åº“
-	int ret = 0;	//åé¦ˆå€¼
+	sqlite3 *db = 0;	//Êý¾Ý¿â
+	int ret = 0;	//·´À¡Öµ
 	char *errmsg = 0;
-	char **dbResult;	//è¿”å›žçš„æŸ¥è¯¢æ•°æ®
+	char **dbResult;	//·µ»ØµÄ²éÑ¯Êý¾Ý
 	int rowNum, columnNum, index;
 
-	sqlite3_open("./Adding.db", &db);	//è¿žæŽ¥æ•°æ®åº“
+	sqlite3_open("./Adding.db", &db);	//Á¬½ÓÊý¾Ý¿â
 
 	char QueryUser[200]= "SELECT * FROM `AccountsPass` WHERE `The Website` = '";
 	    strcat(QueryUser,  _UserIn);
@@ -90,8 +89,8 @@ void SeekInputUI(char _UserIn[100]){
 	if (ret == SQLITE_OK) {
 		index = columnNum;
 		for (int i = 0; i < rowNum; i++) {
-			printf("%-20s%-20s%-20s%-20s%-20s%-20s", dbResult[index], dbResult[index + 1], dbResult[index + 2], dbResult[index + 3], dbResult[index + 4], dbResult[index + 5]);
-			index += 6;
+			printf("%-10s%-30s%-20s%-20s%-20s%-30s%-20s", dbResult[index], dbResult[index + 1], dbResult[index + 2], dbResult[index + 3], dbResult[index + 4], dbResult[index + 5],dbResult[index + 6]);
+			index += 7;
 			printf("\n");
 		}
 	}
@@ -101,23 +100,23 @@ void SeekInputUI(char _UserIn[100]){
 void SeekInputUI2(char _UserIn2[100]){
 	/*The codes below are used as the part if user chooses Loginname as the result!*/
 	
-	sqlite3 *db = 0;	//æ•°æ®åº“
-	int ret = 0;	//åé¦ˆå€¼
+	sqlite3 *db = 0;	//Êý¾Ý¿â
+	int ret = 0;	//·´À¡Öµ
 	char *errmsg = 0;
-	char **dbResult;	//è¿”å›žçš„æŸ¥è¯¢æ•°æ®
+	char **dbResult;	//·µ»ØµÄ²éÑ¯Êý¾Ý
 	int rowNum, columnNum, index;
 
-	sqlite3_open("./Adding.db", &db);	//è¿žæŽ¥æ•°æ®åº“
+	sqlite3_open("./Adding.db", &db);	//Á¬½ÓÊý¾Ý¿â
 
 	char QueryUser[200]= "SELECT * FROM `AccountsPass` WHERE `Login name` = '";
 	    strcat(QueryUser,  _UserIn2);
 		strcat(QueryUser, "'");
-		strcat(QueryUser, "ORDER BY CAST (`ID` AS BINARY) ASC`");
+		strcat(QueryUser, "ORDER BY CAST (`ID` AS BINARY) ASC");
 		//ret = sqlite3_get_table(db, "SELECT * FROM `AccountsPass` ORDER BY CAST (`ID` AS BINARY) ASC", &dbResult, &rowNum, &columnNum, &errmsg);
 
 
 	ret = sqlite3_get_table(db, QueryUser, &dbResult, &rowNum, &columnNum, &errmsg);
-	if (ret == SQLITE_OK) {
+		if (ret == SQLITE_OK) {
 		index = columnNum;
 		for (int i = 0; i < rowNum; i++) {
 			printf("%-10s%-30s%-20s%-20s%-20s%-30s%-20s", dbResult[index], dbResult[index + 1], dbResult[index + 2], dbResult[index + 3], dbResult[index + 4], dbResult[index + 5],dbResult[index + 6]);
@@ -125,6 +124,7 @@ void SeekInputUI2(char _UserIn2[100]){
 			printf("\n");
 		}
 	}
+	//sqlite3_free_table(dbResult);
 	sqlite3_free_table(dbResult);
 
 }//SeekInputUI2 end
@@ -133,6 +133,7 @@ int ShowSeekData(void){
 	char _UserIn[100];
 	char The1Choice;
 	char UserChoice;
+	//int QuitGet;
 	
 	//
 	while(1){
@@ -166,7 +167,9 @@ int ShowSeekData(void){
 	printf("ID        The Website	                Login name	    The 3rd acconuts    Phone number	    E-mail address	          Password\n");
 	for (int i = 0; i < Conls; i++) {
 			printf("-");
-		}
+
+	}
+
 	SeekInputUI2(_UserIn);
 	for (int i = 0; i < Conls; i++) {
 			printf("=");
@@ -181,7 +184,7 @@ int ShowSeekData(void){
 		     break;
 	}//if end
 	
-	
+	//else
 		//getchar();
 	}//if big end
 
@@ -228,5 +231,6 @@ int ShowSeekData(void){
 
 	return 0;
 }//ShowSeekData end
+
 
 
