@@ -155,6 +155,7 @@ User input
  }//ModifyINputUI end
 
  void ModifyPageIn(void){
+	 system("title Modify information");
 	 while (1){
 
 				char _Password[100];

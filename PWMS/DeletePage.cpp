@@ -13,6 +13,7 @@
 
 
 void  DelepageUI(void){
+	system("title Delete information");
 	char _ID[50];
 	char UserChoice;
 	

@@ -21,6 +21,7 @@ void BackUI(void);
 
 
 void SeekUI(void){
+
 	//draw UI
 	for(int i=0;i<Conls;i++){
 		printf("=");
@@ -41,7 +42,7 @@ printf("\t\t\t\t\t| |              | | |              | | |              | | |  
 printf("\t\t\t\t\t| '--------------' | '--------------' | '--------------' | '--------------' |\n");
 printf("\t\t\t\t\t '----------------' '----------------' '----------------' '----------------' \n");
 printf("\n\n\n\n");
-printf("\t\t--------------------------------------->Choose  to seek in Login name(L) or Website(W)<-------------------------------\n");
+printf("\t\t--------------------------->Choose  to seek in Login name(L) or Website(W)   E--->Quit<-------------------------------\n");
 
 
 printf("\n\n\n");
@@ -128,6 +129,7 @@ void SeekInputUI2(char _UserIn2[100]){
 
 }//SeekInputUI2 end
 int ShowSeekData(void){
+	system("title Seeking in PWMS");
 	char _UserIn[100];
 	char The1Choice;
 	char UserChoice;
@@ -143,8 +145,10 @@ int ShowSeekData(void){
 	SeekUI();
 	
 	scanf("%c",&The1Choice);
+	if (The1Choice=='e'||The1Choice=='E')
+		break;
 
-	if (The1Choice=='L'||The1Choice=='l'){
+	else if (The1Choice=='L'||The1Choice=='l'){
 		/*The codes below are used as the part if user chooses Loginname as the result!*/
 	
 	printf("\t\t--------------------------------------->Please input the Login name you want to seek<---------------------------------\n");
@@ -177,7 +181,7 @@ int ShowSeekData(void){
 		     break;
 	}//if end
 	
-	//else
+	
 		//getchar();
 	}//if big end
 

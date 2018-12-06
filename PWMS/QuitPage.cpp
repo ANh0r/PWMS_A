@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 void QuitUI(void) {
+	system("title Quiting PWMS");
 	  
 		system("cls");
 printf("\t\t------------------------------------------------>Thanks for using  PWMS<------------------------------------------------\n");

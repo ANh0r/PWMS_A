@@ -62,6 +62,7 @@ printf("\t\t\t\t     --------->If you want to Go Back to the HomePage ,Please In
 }
 
 int AboutPage() {
+	system("title About PWMS");
 	char ch;
 	while (1) {
 

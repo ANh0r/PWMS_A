@@ -1,9 +1,11 @@
 #include<stdio.h>
+#include<windows.h>
 void MainpageMenu(){
+	system("title Welcome to PWMS");
 	int i;
 	//i,j are for circle menu below;
 	char menu[8][50]={"About ME",
-	"Brower Information",
+	"Browse Information",
 	"Add information",
 	"Seek Information",
 	"Modify Information",

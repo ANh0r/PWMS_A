@@ -5,6 +5,7 @@
 #include"ProjectHeader.h"
 
 int main(){
+
 	int ChoosingNumber = 0;
 	system("mode con cols=150 lines=50");   //Settings of the cols and line
 	system("color 07");     //03 mean UI all about blue

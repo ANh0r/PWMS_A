@@ -38,6 +38,7 @@ void addData(char _data[7][50]) {
 }
 
 int loadAddInfoPage(void) {
+	system("title Add information");
 
 	//每次进入时都清空上次的数据
 	for (int i = 0; i < 7; i++) {

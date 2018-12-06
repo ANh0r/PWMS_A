@@ -10,6 +10,7 @@
 void showData(void);
 
 int loadBrowseInfoPage(void) {
+	system("title Browse information");
 	while (1) {
 		getchar();
 		
