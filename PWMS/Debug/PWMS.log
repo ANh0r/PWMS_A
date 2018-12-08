@@ -1,10 +1,20 @@
-﻿生成启动时间为 2018/12/8 10:45:08。
+﻿生成启动时间为 2018/12/8 12:11:00。
      1>项目“D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\PWMS.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\PWMS.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         d:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BrowsePage.cpp
+         d:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt About.cpp BrowsePage.cpp DeletePage.cpp MainPage.cpp ModifyPage.cpp SeekPage.cpp
+         ModifyPage.cpp
+         DeletePage.cpp
+         正在生成代码...
+     1>d:\game and programme code\github\pwms\pwms\deletepage.cpp(56): warning C4715: “DelepageUI”: 不是所有的控件路径都返回值
+     1>d:\game and programme code\github\pwms\pwms\modifypage.cpp(204): warning C4715: “ModifyPageIn”: 不是所有的控件路径都返回值
+         正在编译...
+         SeekPage.cpp
+         MainPage.cpp
          BrowsePage.cpp
+         About.cpp
+         正在生成代码...
          所有输出均为最新。
        ManifestResourceCompile:
          所有输出均为最新。
@@ -33,4 +43,4 @@
 
 生成成功。
 
-已用时间 00:00:00.90
+已用时间 00:00:02.89

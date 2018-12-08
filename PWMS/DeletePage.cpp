@@ -12,8 +12,14 @@
  void deleteData(char _ID[50]) ;
 
 
-void  DelepageUI(void){
+int   DelepageUI(void){
 	system("title Delete information");
+	
+	system("cls");
+
+	if(PasscodeFunc() == 0){
+		return 0;	
+	}
 	char _ID[50];
 	char UserChoice;
 	

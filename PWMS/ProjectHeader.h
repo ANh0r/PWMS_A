@@ -5,7 +5,10 @@
 #include<stdlib.h>
 #include"sqlite3.h"
 
-
+// PasscodeFunc
+int PasscodeFunc(void);
+//strcmp return 0 means sr1==str2
+//st1<st2 return > 0
 
 //HomePageUI declare
 void HomepageUI();
@@ -21,7 +24,7 @@ int ScriptCheck(char _input[50]);
 int loadBrowseInfoPage(void);
 void showData(int temp);
 //DeletePage
-void  DelepageUI(void);
+int  DelepageUI(void);
 void BrowsePage2(void);
 //SeekPage
 int ShowSeekData(void);
@@ -33,7 +36,7 @@ void BackUI(void);
 void BrowsePageInModify2(void);
  void BrowsePageInModify(void);//show original Data  ShouData in this; and we have declared it in "ProjectHeader.h"
  void ModifyInputUI(char _Password[],char _data0[],char _data1[],char _data2[],char _data3[],char _data4[],char _data5[]);
- void ModifyPageIn(void);
+ int ModifyPageIn(void);
 
 
 

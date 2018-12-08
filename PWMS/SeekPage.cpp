@@ -130,6 +130,14 @@ void SeekInputUI2(char _UserIn2[100]){
 }//SeekInputUI2 end
 int ShowSeekData(void){
 	system("title Seeking in PWMS");
+	system("cls");
+	if(PasscodeFunc() == 0){
+		return 0;	
+	}
+
+
+
+
 	char _UserIn[100];
 	char The1Choice;
 	char UserChoice;

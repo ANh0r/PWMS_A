@@ -22,7 +22,7 @@ User input
 #define Conls 150
  void BrowsePageInModify(void);//show original Data  ShouData in this; and we have declared it in "ProjectHeader.h"
  void ModifyInputUI(char _Password[],char _data0[],char _data1[],char _data2[],char _data3[],char _data4[],char _data5[]);
- void ModifyPageIn(void);
+ int ModifyPageIn(void);
  void BrowsePageInModify2(void);
 
  void BrowsePageInModify(void){
@@ -154,8 +154,12 @@ User input
 	//sqlite3_free_table(dbResult);
  }//ModifyINputUI end
 
- void ModifyPageIn(void){
+ int ModifyPageIn(void){
 	 system("title Modify information");
+	 system("cls");
+	if(PasscodeFunc() == 0){
+		return 0;	
+	}
 	 while (1){
 
 				char _Password[100];

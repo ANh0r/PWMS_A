@@ -125,7 +125,7 @@ if--->oracle  db ----> to use order by to_number(sort) ASC;
 		
 		if (temp==0){
 		for (int i = 0; i < rowNum; i++) {
-			printf("%-10s%-30s%-20s%-20s%-20s%-30s**********", dbResult[index], dbResult[index + 1], dbResult[index + 2], dbResult[index + 3], dbResult[index + 4], dbResult[index + 5]);
+			printf("%-10s%-30s%-20s     ********        **********             ********                  ********", dbResult[index], dbResult[index + 1], dbResult[index + 2]);
 			index += 7;
 			printf("\n");
 		}

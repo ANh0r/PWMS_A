@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<windows.h>
+#include<string.h>
+int PasscodeFunc(void);
 void MainpageMenu(){
 	system("title Welcome to PWMS");
 	int i;
@@ -70,5 +72,59 @@ printf("\t\t					|    |     \\        /         \\/        \\\n");
 	//printf("==========================================================================================================================\n");
 	printf("--------------------------------------------------------->Please input the number you choose below<---------------------------------------------------\n");
 }
+int  PasscodeFunc(void){
+	char Passcode[20];
+	char PasscodeOri[20]="iloveyou";
+	char ExitToHm[20]="exit";
+	while(1){
+	system("cls");
+
+	printf("\n\n\n\n\n\n");
+	printf("\n\n\n\n\n\n");
+
+	
+	printf("\t\t\t----------------->This function needs Passcode,Please input the Passcode below\n\t\t\t\t\t\t\tAnd the Passcode comes from your Supporter<--------------------------\n ");
+    scanf("%s",Passcode);
+
+
+	if(strcmp(PasscodeOri,Passcode)==0){
+		
+			printf("\t\t\t-----------------> Passcode is right,Thank you for using the PWMS<-------------------------- ");
+			return 1;		//Right!
+			break;
+			
+			}//if end
+	else if (_stricmp(ExitToHm,Passcode)==0){
+			return 0;			//Exit
+		;//HomepageUI();;
+	}else {
+		while (1){
+
+			printf("\t\t\t\t\t-----------------> Passcode is wrong,Please try again<--------------------------\n ");
+				scanf("%s",Passcode);
+
+
+					if(strcmp(PasscodeOri,Passcode)==0){
+		
+						printf("\t\t\t-----------------> Passcode is right,Thank you for using the PWMS<-------------------------- ");
+						return 1;	
+						break;
+					}else if (_stricmp(ExitToHm,Passcode)==0){
+						return 0;	
+					}
+		}//while in else end
+		break;
+					
+
+			
+
+	getchar();
+
+	}// else end
+	}//while end
+
+
+
+}//PasscodeFunc end
 
 
