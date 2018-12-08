@@ -1,2 +1,15 @@
 
 PWMS/Adding.db
+*.db
+PWMS/Debug/AddPage.obj
+*.obj
+*.tlog
+*.ilk
+*.pdb
+*.ipch
+*.sdf
+*.suo
+*.cache
+*.exe
+*.ilk
+*.db

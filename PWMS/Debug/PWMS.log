@@ -1,23 +1,27 @@
-﻿生成启动时间为 2018/12/8 12:11:00。
-     1>项目“D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\PWMS.vcxproj”在节点 2 上(build 个目标)。
-     1>InitializeBuildStatus:
+﻿生成启动时间为 2018/12/8 15:45:40。
+     1>项目“D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\PWMS.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\PWMS.lastbuildstate”。
+       InitializeBuildStatus:
          正在创建“Debug\PWMS.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         d:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt About.cpp BrowsePage.cpp DeletePage.cpp MainPage.cpp ModifyPage.cpp SeekPage.cpp
+         d:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt About.cpp AddPage.cpp BrowsePage.cpp DeletePage.cpp MainPage.cpp HomepageUI.cpp ModifyPage.cpp QuitPage.cpp SeekPage.cpp
+         SeekPage.cpp
+         QuitPage.cpp
          ModifyPage.cpp
+         HomepageUI.cpp
+         MainPage.cpp
          DeletePage.cpp
+         BrowsePage.cpp
+         AddPage.cpp
+         About.cpp
          正在生成代码...
      1>d:\game and programme code\github\pwms\pwms\deletepage.cpp(56): warning C4715: “DelepageUI”: 不是所有的控件路径都返回值
      1>d:\game and programme code\github\pwms\pwms\modifypage.cpp(204): warning C4715: “ModifyPageIn”: 不是所有的控件路径都返回值
-         正在编译...
-         SeekPage.cpp
-         MainPage.cpp
-         BrowsePage.cpp
-         About.cpp
-         正在生成代码...
-         所有输出均为最新。
+         d:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt sqlite3.c
+         sqlite3.c
        ManifestResourceCompile:
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\PWMS.exe.embed.manifest.res" Debug\PWMS_manifest.rc 
        Link:
          d:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\Debug\PWMS.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\PWMS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\Debug\PWMS.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\Debug\PWMS.lib" /MACHINE:X86 Debug\PWMS.exe.embed.manifest.res
          Debug\About.obj
@@ -31,16 +35,27 @@
          Debug\SeekPage.obj
          Debug\sqlite3.obj
        Manifest:
+         正在删除文件“Debug\PWMS.exe.embed.manifest”。
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\PWMS.exe.embed.manifest" /manifest Debug\PWMS.exe.intermediate.manifest
-         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\PWMS.exe.embed.manifest.res" Debug\PWMS_manifest.rc 
        LinkEmbedManifest:
-         所有输出均为最新。
+         d:\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\Debug\PWMS.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\PWMS.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\Debug\PWMS.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\Debug\PWMS.lib" /MACHINE:X86 Debug\PWMS.exe.embed.manifest.res
+         Debug\About.obj
+         Debug\AddPage.obj
+         Debug\BrowsePage.obj
+         Debug\DeletePage.obj
+         Debug\MainPage.obj
+         Debug\HomepageUI.obj
+         Debug\ModifyPage.obj
+         Debug\QuitPage.obj
+         Debug\SeekPage.obj
+         Debug\sqlite3.obj
          PWMS.vcxproj -> D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\Debug\PWMS.exe
        FinalizeBuildStatus:
          正在删除文件“Debug\PWMS.unsuccessfulbuild”。
          正在对“Debug\PWMS.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\PWMS.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\PWMS.vcxproj”(rebuild 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:02.89
+已用时间 00:00:06.08
