@@ -54,6 +54,8 @@ int loadBrowseInfoPage(void) {
 		scanf("%d",&Userinput);
 		if (Userinput==1215)
 			temp=1;
+		else
+			temp=-1;
 
 
 
@@ -135,6 +137,9 @@ if--->oracle  db ----> to use order by to_number(sort) ASC;
 			printf("\n");
 		}
 		}//if temp==1 end
+		else 
+			printf("\n\t\t\t\t\t\t\t\tYour Password is wrong\n");
+
 
 	}
 	sqlite3_free_table(dbResult);

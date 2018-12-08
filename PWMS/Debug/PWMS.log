@@ -1,12 +1,10 @@
-﻿生成启动时间为 2018/12/7 0:01:18。
+﻿生成启动时间为 2018/12/8 10:45:08。
      1>项目“D:\GAME AND PROGRAMME CODE\GitHub\PWMS\PWMS\PWMS.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\PWMS.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         d:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BrowsePage.cpp SeekPage.cpp
-         SeekPage.cpp
+         d:\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BrowsePage.cpp
          BrowsePage.cpp
-         正在生成代码...
          所有输出均为最新。
        ManifestResourceCompile:
          所有输出均为最新。
@@ -35,4 +33,4 @@
 
 生成成功。
 
-已用时间 00:00:02.79
+已用时间 00:00:00.90
