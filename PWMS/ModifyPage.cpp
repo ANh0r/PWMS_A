@@ -25,6 +25,7 @@ User input
  int ModifyPageIn(void);
  void BrowsePageInModify2(void);
 
+ //Before modifying Data UI
  void BrowsePageInModify(void){
 	 for (int i = 0; i < Conls; i++) {
 		printf("=");
@@ -66,13 +67,14 @@ User input
 
  }//BrowsePageInModify end
 
+ //After modifying Data UI
   void BrowsePageInModify2(void){
 	  system("cls");		
 		for (int i = 0; i < Conls; i++) {
 			printf("=");
 			}//for end
 
-				//上方的线
+				//line above
 				BackUI();
 		for (int i = 0; i < Conls; i++) {
 				printf("=");
@@ -104,16 +106,17 @@ User input
 
  }//BrowsePageInModify end
 
+  
  void ModifyInputUI(char _Password[],char _data0[],char _data1[],char _data2[],char _data3[],char _data4[],char _data5[]){
 	 /*The codes below are used as the part Password as the result!*/
 	
-	sqlite3 *db = 0;	//数据库
-	int ret = 0;	//反馈值
+	sqlite3 *db = 0;	
+	int ret = 0;	
 	char *errmsg = 0;
-	//char **dbResult;	//返回的查询数据
+	//char **dbResult;	
 	int rowNum;//, columnNum, index;
 
-	sqlite3_open("./Adding.db", &db);	//连接数据库
+	sqlite3_open("./Adding.db", &db);	//
 	
 	
 

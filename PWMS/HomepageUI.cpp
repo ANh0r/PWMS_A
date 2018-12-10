@@ -15,12 +15,12 @@ void MainpageMenu(){
 	"Quit"};
 	for ( i = 0; i < 7; i++) {
 
-		//每一行第一个要加空格到中间
+		//IN EVERY LINE we add a space ahead of the line 
 		if (i % 2 == 0) {
 			printf("                                              ");
 			}
 		printf("%d -> %-30s        ", i+1, menu[i]);// -20 means left duiqi
-	//两个一行，判断是否换行
+	//OUTPUT Enter every 2 line 
 		if ((i + 1) % 2 == 0) {
 			printf("\n\n");
 		}
@@ -28,7 +28,7 @@ void MainpageMenu(){
 }
 	//for(j=0;j<7;j++){
 	
-	printf("\n");	//不打扰接下来的内容
+	printf("\n");	//Do not disturb the text next
 
 }
 

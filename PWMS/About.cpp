@@ -75,7 +75,7 @@ int AboutPage() {
 			break;
 		}
 
-		//去除多余字符，直到换行符。等待下一次输入。
+		//To clear extra char until \n
 		while (ch != '\n') {
 			ch = getchar();
 		}//while end

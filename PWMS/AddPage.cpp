@@ -14,33 +14,33 @@ I do not change the varible name!
 #define Lines 35
 int ScriptCheck(char _input[50]);
 
-//添加学生信息
+//Add the Website information ------> SQL db needed;
 
-char inputData[7][50];	//输入的 字段
+char inputData[7][50];	//including ID and other Text
 int nowInputIndex = 0;
-char tips[50] = { "" };		//反馈提示
+char tips[50] = { "" };		//feedback
 
 void printForm(int nowIndex);
 
-//添加数据到数据库
+//adding data to SQL db
 void addData(char _data[7][50]) {
-	sqlite3 *db = 0;	//数据库
-	int ret = 0;	//反馈值
+	sqlite3 *db = 0;	//connect to db
+	int ret = 0;	//result
 	char *errmsg = 0;
 
 	char query[2000] = { "" };
 	sprintf(query, "INSERT INTO `AccountsPass` ( 'ID', 'The Website', 'Login name', 'The third acconuts', 'Phone number', 'E-mail address', 'Password') VALUES ( '%s','%s', '%s', '%s', '%s', '%s', '%s')", _data[0], _data[1], _data[2], _data[3], _data[4], _data[5],_data[6]);
 
-	ret = sqlite3_open("./Adding.db", &db);	//连接数据库
-	ret = sqlite3_exec(db, query, NULL, NULL, &errmsg);	//执行SQL
+	ret = sqlite3_open("./Adding.db", &db);	//linked db
+	ret = sqlite3_exec(db, query, NULL, NULL, &errmsg);	//run SQL
 	sqlite3_free(errmsg);
-	sqlite3_close(db);		//断开连接
+	sqlite3_close(db);		//disconnect
 }
 
 int loadAddInfoPage(void) {
 	system("title Add information");
 
-	//每次进入时都清空上次的数据
+	//clear the former data while inputing the next line data
 	for (int i = 0; i < 7; i++) {
 		strcpy(inputData[i], "");
 	}
@@ -50,7 +50,7 @@ int loadAddInfoPage(void) {
 	while (1) {
 		system("cls");
 
-		//上方的线
+		//line above
 		for (int i = 0; i < Conls; i++) {
 			printf("=");
 		}
@@ -68,7 +68,7 @@ int loadAddInfoPage(void) {
 
 		printf("\n\n");
 
-		//操作指令
+		//the 4 order  beneath 
 		for (int i = 0; i < Conls; i++) {
 			printf("-");
 		}
@@ -84,16 +84,18 @@ int loadAddInfoPage(void) {
 
 		// =============== UI ================= //
 
-		char userInput[50];		//用户输入的值
+		char userInput[50];		//the text user input
+		//and we differentiate the text is order or data we introduce "/" to judge it.
 		scanf("%s", userInput);
 
 		int scriptFlag = ScriptCheck(userInput);
 
-		if (scriptFlag == 0) {		//用户输入是数据
-			strcpy(inputData[nowInputIndex], userInput);		//修改字段
+		if (scriptFlag == 0) {		//isData
+			strcpy(inputData[nowInputIndex], userInput);		//modify the ID / Website / ......
 
 			if (nowInputIndex == 7) {
-				//nowInputIndex = 0;		//实际使用感觉不需要这个
+				//nowInputIndex = 0;		// Idk why john wu give this line up....
+				//actually i have no idea that what this part written like this.
 			}
 			else {
 				nowInputIndex++;
@@ -103,14 +105,14 @@ int loadAddInfoPage(void) {
 		else if (scriptFlag == 1) {
 
 		}
-		else if (scriptFlag == -1) {		//退出的指令
+		else if (scriptFlag == -1) {		//quit
 			return 0;
 		}
 
 	}
 }
 
-//打印输入的表单
+//the print form on the screen
 void printForm(int nowIndex) {
 
 	char inputField[][50] = { "ID","The Website", "Login name", "The third acconuts", "Phone number", "E-mail address", "Password" };	//字段提示
@@ -127,9 +129,9 @@ void printForm(int nowIndex) {
 	}
 }
 
-//检测用户输入的是否是指令
+//if order or data
 int ScriptCheck(char _input[50]) {
-	strcpy(tips, "");	//清除上一次的提示
+	strcpy(tips, "");	//clear tips former
 
 	char instruction[5][10] = {
 		"/exit",
@@ -140,11 +142,11 @@ int ScriptCheck(char _input[50]) {
 
 	int insCode = -1;
 
-	if (_input[0] != '/') {		//判断用户输入的是否是指令
+	if (_input[0] != '/') {		//is order
 		return 0;
 	}
 
-	for (int i = 0; i < 5; i++) {		//遍历检测用户输入的指令
+	for (int i = 0; i < 5; i++) {		//read wholy
 		if (!strcmp(_input, instruction[i])) {
 			insCode = i;
 			break;
@@ -163,7 +165,7 @@ int ScriptCheck(char _input[50]) {
 	case 1:
 		addData(inputData);		//SAVE
 
-								//清空上次的数据
+								//clear the data fomer inputted
 		for (int i = 0; i < 7; i++) {
 			strcpy(inputData[i], "");
 		}

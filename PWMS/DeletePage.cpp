@@ -56,14 +56,14 @@ int   DelepageUI(void){
 }//DelepageUI end
 
  void deleteData(char _ID[100]) {
-	sqlite3 *db = 0;	//数据库
-	char ret1 = 0;	//反馈值
+	sqlite3 *db = 0;	
+	char ret1 = 0;	
 	char ret2;
 	char *errmsg = 0;
-	char **dbResult;	//返回的查询数据
+	char **dbResult;	
 	int rowNum, columnNum;// index;
 
-	sqlite3_open("./Adding.db", &db);	//连接数据库
+	sqlite3_open("./Adding.db", &db);	
 
 	ret1 = sqlite3_get_table(db, "SELECT * FROM `AccountsPass` ORDER BY CAST (`ID` AS BINARY) ASC", &dbResult, &rowNum, &columnNum, &errmsg);
 	/*if (ret == SQLITE_OK) 
@@ -95,7 +95,7 @@ void BrowsePage2(void){// Show original Data
 		system("cls");
 		
 
-		//上方的线
+		//line above
 	for (int i = 0; i < Conls; i++) {
 		printf("=");
 		}//for end
@@ -116,7 +116,7 @@ void BrowsePage2(void){// Show original Data
 
 		printf("\n");
 
-		showData(0);		//显示数据
+		showData(0);		//Show Data 
 
 		printf("\n");
 

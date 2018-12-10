@@ -65,16 +65,17 @@ printf("\t\t\t\t\t '----------------' '----------------' '----------------' '---
 printf("\n\n\n\n");
 
 }//BackUI end
+/*The codes below are used as the part if user chooses Website as the result!*/
 void SeekInputUI(char _UserIn[100]){
 	/*The codes below are used as the part if user chooses Website as the result!*/
 	
-	sqlite3 *db = 0;	//数据库
-	int ret = 0;	//反馈值
+	sqlite3 *db = 0;	
+	int ret = 0;	/
 	char *errmsg = 0;
-	char **dbResult;	//返回的查询数据
+	char **dbResult;	
 	int rowNum, columnNum, index;
 
-	sqlite3_open("./Adding.db", &db);	//连接数据库
+	sqlite3_open("./Adding.db", &db);	
 
 	char QueryUser[200]= "SELECT * FROM `AccountsPass` WHERE `The Website` = '";
 	    strcat(QueryUser,  _UserIn);
@@ -97,16 +98,17 @@ void SeekInputUI(char _UserIn[100]){
 	sqlite3_free_table(dbResult);
 
 }//SeekInputUI end
+/*The codes below are used as the part if user chooses Loginname as the result!*/
 void SeekInputUI2(char _UserIn2[100]){
 	/*The codes below are used as the part if user chooses Loginname as the result!*/
 	
-	sqlite3 *db = 0;	//数据库
-	int ret = 0;	//反馈值
+	sqlite3 *db = 0;	
+	int ret = 0;	
 	char *errmsg = 0;
-	char **dbResult;	//返回的查询数据
+	char **dbResult;	
 	int rowNum, columnNum, index;
 
-	sqlite3_open("./Adding.db", &db);	//连接数据库
+	sqlite3_open("./Adding.db", &db);	
 
 	char QueryUser[200]= "SELECT * FROM `AccountsPass` WHERE `Login name` = '";
 	    strcat(QueryUser,  _UserIn2);

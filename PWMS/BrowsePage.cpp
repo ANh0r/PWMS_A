@@ -103,7 +103,7 @@ int loadBrowseInfoPage(void) {
 	return 0;
 }
 
-//ÏÔÊ¾Êý¾Ý
+//Show data
 void showData( int temp) {
 	sqlite3 *db = 0;	// DB
 	int ret1= 0;	// Back Code
