@@ -70,7 +70,7 @@ void SeekInputUI(char _UserIn[100]){
 	/*The codes below are used as the part if user chooses Website as the result!*/
 	
 	sqlite3 *db = 0;	
-	int ret = 0;	/
+	int ret = 0;	
 	char *errmsg = 0;
 	char **dbResult;	
 	int rowNum, columnNum, index;
