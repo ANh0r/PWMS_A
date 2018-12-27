@@ -89,7 +89,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ProjectHeader.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="sqlite3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PWMS.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.png" />
+    <None Include="icon1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
