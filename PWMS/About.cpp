@@ -37,7 +37,7 @@ printf("\t\t\t\t\t '----------------' '----------------' '----------------' '---
 	printf("\t\t			Some codes of the system are Asked form John Wu ( The author of SIMS personally)\n\n");
 	printf("\t\t			And for any further Questions Please contact with Magicred Anhor\n\n");
 	printf("\t\t			His number is 819702016£¨Tencent£©\n\n ");
-	printf("\t\t			Wechat is aviliable(vanhor)\n\n ");
+	printf("\t\t			Wechat is available(vanhor)\n\n ");
 	printf("\t\t			The passwords of this system may not be true\n\n");
 	printf("\t\t			Please do not try these passcodes in reality.\n\n ");
 	printf("\t\t			Thanks!\n\n ");
